@@ -1,0 +1,22 @@
+services:
+  mongo:
+    image: mongo:8
+    ports: ["27017:27017"]
+    volumes: ["mongo_data:/data/db"]
+  redis:
+    image: redis:7-alpine
+    ports: ["6379:6379"]
+  aria2:
+    image: p3terx/aria2-pro
+    ports: ["6800:6800"]
+    volumes:
+      - ./downloads:/downloads
+      - ./aria2-config:/config
+    env_file:
+      - ./backend/.env
+    environment:
+      DISK_CACHE: 64M
+      RPC_PORT: 6800
+      LISTEN_PORT: 6888
+volumes:
+  mongo_data:

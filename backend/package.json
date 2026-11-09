@@ -1,0 +1,23 @@
+{
+  "name": "torrentcloud-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "bcryptjs": "^3.0.3",
+    "bullmq": "^5.61.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^9.0.0",
+    "multer": "^2.0.2",
+    "socket.io": "^4.8.1"
+  }
+}
